@@ -43,6 +43,7 @@ export default function Home() {
           size='small'
         />
       </div>
+            </div>
           <UserNav session={session} />
         </div>
 

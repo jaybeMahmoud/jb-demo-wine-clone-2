@@ -5,6 +5,7 @@ import Link from "next/link";
 import { UserNav } from "~/components/UserNav";
 import { Button } from "~/components/ui/button";
 import * as Table from "~/components/ui/table";
+import TextField from "@mui/material/TextField";
 
 import { api } from "~/utils/api";
 
@@ -32,6 +33,16 @@ export default function Home() {
               <Link href="/create">Create</Link>
             </Button>
           </div>
+          <div className="main">
+      <div className="search">
+        <TextField
+          id="outlined-basic"
+          variant="outlined"
+          fullWidth
+          label="Search"
+          size='small'
+        />
+      </div>
           <UserNav session={session} />
         </div>
 

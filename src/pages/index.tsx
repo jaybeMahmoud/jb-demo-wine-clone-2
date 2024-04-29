@@ -7,6 +7,7 @@ import { Button } from "~/components/ui/button";
 import * as Table from "~/components/ui/table";
 import { ReadMore } from "~/components/ReadMore";
 import  "~/components/SearchBar.css";
+import  "~/components/SearchBar.css";
 import TextField from "@mui/material/TextField";
 
 import { api } from "~/utils/api";

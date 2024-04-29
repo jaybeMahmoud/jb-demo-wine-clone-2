@@ -45,6 +45,8 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.51.0",
     "react-search-box": "^2.3.0",
+    "read-more-react": "^1.0.10",
+    "readmore-js": "^2.2.1",
     "superjson": "^2.2.1",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7",

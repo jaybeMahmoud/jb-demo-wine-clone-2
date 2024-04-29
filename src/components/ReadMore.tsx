@@ -15,7 +15,7 @@ export const ReadMore = ({ id, text, amountOfWords = 22 }: ReadMoreProps) => {
     : text
   const endText = splittedText.slice(amountOfWords - 1).join(' ')
   
-  const handleKeyboard = (e) => {
+  const handleKeyboard = (e: { code: string }) => {
     if (e.code === 'Space' || e.code === 'Enter') {
       setIsExpanded(!isExpanded)
     }

@@ -105,9 +105,14 @@ export default function Home() {
                 <Table.TableCell>{wine.rating}</Table.TableCell>
                 <Table.TableCell>{wine.varietal}</Table.TableCell>
                 <Table.TableCell className="relative h-full w-60">
-                  <div className="absolute inset-0" id="scroll-area">
-                    <ScrollArea className="h-full">{wine.note}</ScrollArea>
-                  </div>
+                <div className="absolute inset-0" id="scroll-area">
+                <ScrollArea className="h-full"
+                  style={{
+                    color: "#8c8c8c"
+                  }}
+                > <ReadMore id="read-more-text" text={wine.note} /></ScrollArea>
+
+              </div>
                 </Table.TableCell>
               </Table.TableRow>
             ))}

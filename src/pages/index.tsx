@@ -34,9 +34,9 @@ export default function Home() {
               <Link href="/create">Create</Link>
             </Button>
           </div>
-          <div className="main" style={{...{"display":"flex","height":"3em","width":"100%","alignItems":"center","flexDirection":"column","rowGap":"20px"},"search":{"width":"30%"},"ul_li":{"fontSize":"20px"}}}>
-      <div className="search">
-        <TextField
+          <div className="main" style={{...{"display":"flex","height":"3em","width":"100%","alignItems":"center","flexDirection":"column","rowGap":"20px"}}}>
+      <div className="search"style={{"width":"30%"}}>
+        <TextField  style={{"fontSize":"20px"}}
           id="outlined-basic"
           variant="outlined"
           fullWidth

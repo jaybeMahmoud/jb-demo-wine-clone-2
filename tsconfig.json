@@ -29,6 +29,12 @@
       "~/*": ["./src/*"]
     }
   },
+  "awesomeTypescriptLoaderOptions": {
+    "useWebpackText": true,
+    "useTranspileModule": true,
+    "doTypeCheck": true,
+    "forkChecker": true
+},
   "include": [
     ".eslintrc.cjs",
     "next-env.d.ts",

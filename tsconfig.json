@@ -13,6 +13,7 @@
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "checkJs": true,
+    
 
     /* Bundled projects */
     "lib": ["dom", "dom.iterable", "ES2022"],
@@ -29,12 +30,7 @@
       "~/*": ["./src/*"]
     }
   },
-  "awesomeTypescriptLoaderOptions": {
-    "useWebpackText": true,
-    "useTranspileModule": true,
-    "doTypeCheck": true,
-    "forkChecker": true
-},
+  
   "include": [
     ".eslintrc.cjs",
     "next-env.d.ts",

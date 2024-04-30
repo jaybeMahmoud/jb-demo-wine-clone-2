@@ -18,7 +18,7 @@ const config = {
     "@typescript-eslint/no-empty-interface": "off",
 
     "@typescript-eslint/consistent-type-imports": [
-      "warn",
+      "error",
       {
         prefer: "type-imports",
         fixStyle: "inline-type-imports",

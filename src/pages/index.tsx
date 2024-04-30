@@ -6,7 +6,6 @@ import { UserNav } from "~/components/UserNav";
 import { Button } from "~/components/ui/button";
 import * as Table from "~/components/ui/table";
 import { ReadMore } from "~/components/ReadMore";
-import  "~/components/SearchBar.css";
 import TextField from "@mui/material/TextField";
 
 import { api } from "~/utils/api";
@@ -35,7 +34,7 @@ export default function Home() {
               <Link href="/create">Create</Link>
             </Button>
           </div>
-          <div className="main">
+          <div className="main" style={{...{"display":"flex","height":"3em","width":"100%","alignItems":"center","flexDirection":"column","rowGap":"20px"},"search":{"width":"30%"},"ul_li":{"fontSize":"20px"}}}>
       <div className="search">
         <TextField
           id="outlined-basic"
@@ -118,6 +117,7 @@ export default function Home() {
             ))}
           </Table.TableBody>
         </Table.Table>
+        
       </main>
     </>
   );

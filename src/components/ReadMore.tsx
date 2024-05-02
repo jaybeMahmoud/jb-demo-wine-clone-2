@@ -27,6 +27,7 @@ export const ReadMore = ({ id, text, amountOfWords = 22 }: ReadMoreProps) => {
       {itCanOverflow && (
         <>
           {!isExpanded && <span>... </span>}
+          {isExpanded && <span>  </span>}
           <span 
             className={`${!isExpanded && 'hidden'}`} 
             aria-hidden={!isExpanded}

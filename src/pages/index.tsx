@@ -109,7 +109,7 @@ export default function Home() {
                   style={{
                     color: "#8c8c8c"
                   }}
-                > <ReadMore id="read-more-text" text={(" ")+wine.note} /></ScrollArea>
+                > <ReadMore id="read-more-text" text={(" ") + (wine.note)} /></ScrollArea>
 
               </div>
                 </Table.TableCell>

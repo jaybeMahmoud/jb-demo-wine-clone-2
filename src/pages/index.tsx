@@ -6,6 +6,7 @@ import { UserNav } from "~/components/UserNav";
 import { Button } from "~/components/ui/button";
 import * as Table from "~/components/ui/table";
 import { ReadMore } from "~/components/ReadMore";
+
 import TextField from "@mui/material/TextField";
 
 import { api } from "~/utils/api";
@@ -13,10 +14,17 @@ import { api } from "~/utils/api";
 import { wineries } from "~/lib/data";
 import { useRouter } from "next/router";
 import { ScrollArea } from "~/components/ui/scroll-area";
+import React, { useState } from "react";
+import { Input } from "~/components/ui/input";
 
 export default function Home() {
   const { data: session } = useSession({ required: true });
   const { data: wines } = api.wine.getWines.useQuery();
+
+  const [inputText, setInputText] = useState("");
+  const filteredWines = wines?.filter(w => w.name.toLowerCase().includes(inputText))
+
+  
 
   const router = useRouter();
 
@@ -35,15 +43,8 @@ export default function Home() {
             </Button>
           </div>
           <div className="main" style={{...{"display":"flex","height":"3em","width":"100%","alignItems":"center","flexDirection":"column","rowGap":"20px"}}}>
-      <div className="search"style={{"width":"30%"}}>
-        <TextField  style={{"fontSize":"20px"}}
-          id="outlined-basic"
-          variant="outlined"
-          fullWidth
-          label="Search"
-          size='small'
-        />
-      </div>
+      <Input className="w-1/3" placeholder="Search" onChange={(e) => setInputText(e.target.value.toLowerCase())} value={inputText} />
+      {/* <Posts input={inputText}/> */}
             </div>
           <UserNav session={session} />
         </div>
@@ -64,7 +65,7 @@ export default function Home() {
             </Table.TableRow>
           </Table.TableHeader>
           <Table.TableBody>
-            {wines?.map((wine, index) => (
+            {filteredWines?.map((wine, index) => (
               <Table.TableRow
                 key={wine.name + index}
                 onClick={(e) => {
